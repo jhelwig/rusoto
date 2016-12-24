@@ -45,7 +45,7 @@
 
 extern crate chrono;
 extern crate data_encoding;
-extern crate hyper;
+extern crate reqwest;
 #[macro_use] extern crate lazy_static;
 #[macro_use] extern crate log;
 extern crate md5;
