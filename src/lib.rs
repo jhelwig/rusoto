@@ -92,6 +92,8 @@ mod mock;
 
 #[cfg(feature = "acm")]
 pub mod acm;
+#[cfg(feature = "autoscaling")]
+pub mod autoscaling;
 #[allow(unused_imports)]
 #[cfg(feature = "cloudformation")]
 pub mod cloudformation;

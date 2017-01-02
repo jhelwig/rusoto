@@ -48,6 +48,7 @@ fn main() {
 
     let services = services! {
         ["acm", "2015-12-08"],
+        ["autoscaling", "2011-01-01"],
         ["cloudformation", "2010-05-15"],
         ["cloudhsm", "2014-05-30"],
         ["cloudtrail", "2013-11-01"],
