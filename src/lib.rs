@@ -135,6 +135,8 @@ pub mod ecr;
 pub mod ecs;
 #[cfg(feature = "emr")]
 pub mod emr;
+#[cfg(feature = "elasticache")]
+pub mod elasticache;
 #[cfg(feature = "elastictranscoder")]
 pub mod elastictranscoder;
 #[cfg(feature = "events")]
