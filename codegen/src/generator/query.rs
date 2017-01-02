@@ -276,6 +276,7 @@ fn generate_primitive_deserializer(shape: &Shape) -> String {
     let statement =  match shape.shape_type {
         ShapeType::String | ShapeType::Timestamp => "try!(characters(stack))",
         ShapeType::Integer => "i32::from_str(try!(characters(stack)).as_ref()).unwrap()",
+        ShapeType::Long => "i64::from_str(try!(characters(stack)).as_ref()).unwrap()",        
         ShapeType::Double => "f64::from_str(try!(characters(stack)).as_ref()).unwrap()",
         ShapeType::Blob => "try!(characters(stack)).into_bytes()",
         ShapeType::Boolean => "bool::from_str(try!(characters(stack)).as_ref()).unwrap()",
@@ -539,7 +540,7 @@ fn generate_struct_field_serializers(shape: &Shape, service: &Service) -> String
 fn generate_primitive_serializer(shape: &Shape) -> String {
     let expression = match shape.shape_type {
         ShapeType::String | ShapeType::Timestamp => "obj",
-        ShapeType::Integer | ShapeType::Double | ShapeType::Boolean => "&obj.to_string()",
+        ShapeType::Integer | ShapeType::Double | ShapeType::Boolean | ShapeType::Long => "&obj.to_string()",
         ShapeType::Blob => "::std::str::from_utf8(obj).unwrap()",
         shape_type => panic!("Unknown primitive shape type: {:?}", shape_type),
     };

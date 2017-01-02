@@ -99,6 +99,8 @@ pub mod autoscaling;
 pub mod cloudformation;
 #[cfg(feature = "cloudhsm")]
 pub mod cloudhsm;
+#[cfg(feature = "cloudsearch")]
+pub mod cloudsearch;
 #[cfg(feature = "cloudtrail")]
 pub mod cloudtrail;
 #[cfg(feature = "cloudwatch")]
