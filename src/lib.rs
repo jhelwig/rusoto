@@ -153,6 +153,8 @@ pub mod iot;
 pub mod kinesis;
 #[cfg(feature = "kms")]
 pub mod kms;
+#[cfg(feature = "lambda")]
+pub mod lambda;
 #[cfg(feature = "logs")]
 pub mod logs;
 #[cfg(feature = "machinelearning")]

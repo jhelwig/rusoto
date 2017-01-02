@@ -116,7 +116,9 @@ impl GenerateProtocol for RestJsonGenerator {
 }
 
 fn can_skip_serializer(struct_name: &str) -> bool {
-    if struct_name.ends_with("Response") {
+    if struct_name.ends_with("Response") &&
+       // exception for Lambda
+       struct_name != "VpcConfigResponse" {
         return true;
     }
     false
