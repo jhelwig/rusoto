@@ -7,6 +7,7 @@ use self::query::QueryGenerator;
 use self::rest_json::RestJsonGenerator;
 use self::rest_xml::RestXmlGenerator;
 use self::error_types::{GenerateErrorTypes, JsonErrorTypes, XmlErrorTypes};
+use self::tests::generate_tests;
 
 mod error_types;
 mod ec2;
@@ -23,12 +24,11 @@ pub trait GenerateProtocol {
 
     fn generate_struct_attributes(&self, struct_name: &str) -> String;
 
-    fn generate_support_types(&self, _name: &str, _shape: &Shape, _service: &Service)
-        -> Option<String> {
-        None
-    }
-
-    fn generate_tests(&self, _service: &Service) -> Option<String> {
+    fn generate_support_types(&self,
+                              _name: &str,
+                              _shape: &Shape,
+                              _service: &Service)
+                              -> Option<String> {
         None
     }
 
@@ -46,7 +46,9 @@ pub fn generate_source(service: &Service) -> String {
     }
 }
 
-fn generate<P, E>(service: &Service, protocol_generator: P, error_type_generator: E) -> String where P: GenerateProtocol,  E: GenerateErrorTypes {
+fn generate<P, E>(service: &Service, protocol_generator: P, error_type_generator: E) -> String
+    where P: GenerateProtocol,
+          E: GenerateErrorTypes {
     format!(
         "#[allow(warnings)]
         use reqwest::Client;
@@ -72,12 +74,12 @@ fn generate<P, E>(service: &Service, protocol_generator: P, error_type_generator
         prelude = &protocol_generator.generate_prelude(service),
         types = generate_types(service, &protocol_generator),
         error_types = error_type_generator.generate_error_types(service).unwrap_or("".to_string()),
-        tests = &protocol_generator.generate_tests(service).unwrap_or("".to_string()),
+        tests = &generate_tests(service).unwrap_or("".to_string()),
     )
 }
 
 fn generate_client<P>(service: &Service, protocol_generator: &P) -> String
-where P: GenerateProtocol {
+    where P: GenerateProtocol {
     format!(
         "/// A client for the {service_name} API.
         pub struct {type_name}<P, D> where P: ProvideAwsCredentials, D: DispatchSignedRequest {{
@@ -115,7 +117,9 @@ where P: GenerateProtocol {
 }
 
 fn generate_list(name: &str, shape: &Shape) -> String {
-    format!("pub type {} = Vec<{}>;", name, mutate_type_name(shape.member()))
+    format!("pub type {} = Vec<{}>;",
+            name,
+            mutate_type_name(shape.member()))
 }
 
 fn generate_map(name: &str, shape: &Shape) -> String {
@@ -144,8 +148,7 @@ fn generate_primitive_type(name: &str, shape_type: ShapeType, for_timestamps: &s
 }
 
 // do any type name mutation needed to avoid collisions
-fn mutate_type_name(type_name: &str) -> String{
-
+fn mutate_type_name(type_name: &str) -> String {
     let capitalized = capitalize_first(type_name.to_owned());
 
     match &capitalized[..] {
@@ -156,12 +159,12 @@ fn mutate_type_name(type_name: &str) -> String{
         "CancelSpotFleetRequests" => "EC2CancelSpotFleetRequests".to_owned(),
 
         // otherwise make sure it's rust-idiomatic and capitalized
-        _ => capitalized
+        _ => capitalized,
     }
 }
 
 fn generate_types<P>(service: &Service, protocol_generator: &P) -> String
-where P: GenerateProtocol {
+    where P: GenerateProtocol {
     service.shapes.iter().filter_map(|(name, shape)| {
 
         let type_name = mutate_type_name(name);
@@ -200,12 +203,12 @@ where P: GenerateProtocol {
 
 
 
-fn generate_struct<P>(
-    service: &Service,
-    name: &str,
-    shape: &Shape,
-    protocol_generator: &P,
-) -> String where P: GenerateProtocol {
+fn generate_struct<P>(service: &Service,
+                      name: &str,
+                      shape: &Shape,
+                      protocol_generator: &P)
+                      -> String
+    where P: GenerateProtocol {
     if shape.members.is_none() || shape.members.as_ref().unwrap().is_empty() {
         format!(
             "{attributes}
@@ -291,7 +294,8 @@ impl Operation {
 
 /// Takes a string and returns it with the first letter capitalized.
 /// If the input string is empty an empty string is returned.
-pub fn capitalize_first<S>(word: S) -> String where S: Into<String> {
+pub fn capitalize_first<S>(word: S) -> String
+    where S: Into<String> {
     let s = word.into();
     let mut chars = s.chars();
     match chars.next() {
@@ -303,5 +307,6 @@ pub fn capitalize_first<S>(word: S) -> String where S: Into<String> {
 #[test]
 fn capitalize_first_test() {
     assert_eq!(capitalize_first("a &str test"), "A &str test".to_owned());
-    assert_eq!(capitalize_first("a String test".to_owned()), "A String test".to_owned());
+    assert_eq!(capitalize_first("a String test".to_owned()),
+               "A String test".to_owned());
 }
