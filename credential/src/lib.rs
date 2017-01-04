@@ -8,6 +8,7 @@ extern crate chrono;
 extern crate hyper;
 extern crate regex;
 extern crate serde_json;
+extern crate retry;
 
 pub use environment::EnvironmentProvider;
 pub use container::ContainerProvider;
