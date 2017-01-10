@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `ViewerCertificate` struct in crate `rusoto`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, ViewerCertificate">
+
+    <title>rusoto::cloudfront::ViewerCertificate - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>rusoto</a>::<wbr><a href='index.html'>cloudfront</a></p><script>window.sidebarCurrent = {name: 'ViewerCertificate', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>rusoto</a>::<wbr><a href='index.html'>cloudfront</a>::<wbr><a class='struct' href=''>ViewerCertificate</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-18978' class='srclink' href='../../src/rusoto/home/travis/build/rusoto/rusoto/target/debug/build/rusoto-eb4f6d3294d9c978/out/cloudfront.rs.html#8737-8759' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct ViewerCertificate {
+    pub acm_certificate_arn: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+    pub certificate: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+    pub certificate_source: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/cloudfront/type.CertificateSource.html' title='rusoto::cloudfront::CertificateSource'>CertificateSource</a>&gt;,
+    pub cloud_front_default_certificate: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/cloudfront/type.Boolean.html' title='rusoto::cloudfront::Boolean'>Boolean</a>&gt;,
+    pub iam_certificate_id: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+    pub minimum_protocol_version: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/cloudfront/type.MinimumProtocolVersion.html' title='rusoto::cloudfront::MinimumProtocolVersion'>MinimumProtocolVersion</a>&gt;,
+    pub ssl_support_method: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/cloudfront/type.SSLSupportMethod.html' title='rusoto::cloudfront::SSLSupportMethod'>SSLSupportMethod</a>&gt;,
+}</pre><div class='docblock'><p>A complex type that contains information about viewer certificates for this distribution.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.acm_certificate_arn' class='structfield'>
+                           <span id='acm_certificate_arn.v' class='invisible'>
+                           <code>acm_certificate_arn: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>If you want viewers to use HTTPS to request your objects and you&#39;re using an alternate domain name in your object URLs (for example, <a href="https://example.com/logo.jpg">https://example.com/logo.jpg</a>), specify the ACM certificate ARN of the custom viewer certificate for this distribution. Specify either this value, IAMCertificateId, or CloudFrontDefaultCertificate.</p>
+</div><span id='structfield.certificate' class='structfield'>
+                           <span id='certificate.v' class='invisible'>
+                           <code>certificate: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Note: this field is deprecated. Please use one of [ACMCertificateArn, IAMCertificateId, CloudFrontDefaultCertificate].</p>
+</div><span id='structfield.certificate_source' class='structfield'>
+                           <span id='certificate_source.v' class='invisible'>
+                           <code>certificate_source: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/cloudfront/type.CertificateSource.html' title='rusoto::cloudfront::CertificateSource'>CertificateSource</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Note: this field is deprecated. Please use one of [ACMCertificateArn, IAMCertificateId, CloudFrontDefaultCertificate].</p>
+</div><span id='structfield.cloud_front_default_certificate' class='structfield'>
+                           <span id='cloud_front_default_certificate.v' class='invisible'>
+                           <code>cloud_front_default_certificate: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/cloudfront/type.Boolean.html' title='rusoto::cloudfront::Boolean'>Boolean</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>If you want viewers to use HTTPS to request your objects and you&#39;re using the CloudFront domain name of your distribution in your object URLs (for example, <a href="https://d111111abcdef8.cloudfront.net/logo.jpg">https://d111111abcdef8.cloudfront.net/logo.jpg</a>), set to true. Omit this value if you are setting an ACMCertificateArn or IAMCertificateId.</p>
+</div><span id='structfield.iam_certificate_id' class='structfield'>
+                           <span id='iam_certificate_id.v' class='invisible'>
+                           <code>iam_certificate_id: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>If you want viewers to use HTTPS to request your objects and you&#39;re using an alternate domain name in your object URLs (for example, <a href="https://example.com/logo.jpg">https://example.com/logo.jpg</a>), specify the IAM certificate identifier of the custom viewer certificate for this distribution. Specify either this value, ACMCertificateArn, or CloudFrontDefaultCertificate.</p>
+</div><span id='structfield.minimum_protocol_version' class='structfield'>
+                           <span id='minimum_protocol_version.v' class='invisible'>
+                           <code>minimum_protocol_version: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/cloudfront/type.MinimumProtocolVersion.html' title='rusoto::cloudfront::MinimumProtocolVersion'>MinimumProtocolVersion</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Specify the minimum version of the SSL protocol that you want CloudFront to use, SSLv3 or TLSv1, for HTTPS connections. CloudFront will serve your objects only to browsers or devices that support at least the SSL version that you specify. The TLSv1 protocol is more secure, so we recommend that you specify SSLv3 only if your users are using browsers or devices that don&#39;t support TLSv1. If you&#39;re using a custom certificate (if you specify a value for IAMCertificateId) and if you&#39;re using dedicated IP (if you specify vip for SSLSupportMethod), you can choose SSLv3 or TLSv1 as the MinimumProtocolVersion. If you&#39;re using a custom certificate (if you specify a value for IAMCertificateId) and if you&#39;re using SNI (if you specify sni-only for SSLSupportMethod), you must specify TLSv1 for MinimumProtocolVersion.</p>
+</div><span id='structfield.ssl_support_method' class='structfield'>
+                           <span id='ssl_support_method.v' class='invisible'>
+                           <code>ssl_support_method: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../rusoto/cloudfront/type.SSLSupportMethod.html' title='rusoto::cloudfront::SSLSupportMethod'>SSLSupportMethod</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>If you specify a value for IAMCertificateId, you must also specify how you want CloudFront to serve HTTPS requests. Valid values are vip and sni-only. If you specify vip, CloudFront uses dedicated IP addresses for your content and can respond to HTTPS requests from any viewer. However, you must request permission to use this feature, and you incur additional monthly charges. If you specify sni-only, CloudFront can only respond to HTTPS requests from viewers that support Server Name Indication (SNI). All modern browsers support SNI, but some browsers still in use don&#39;t support SNI. Do not specify a value for SSLSupportMethod if you specified true for CloudFrontDefaultCertificate.</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../rusoto/cloudfront/struct.ViewerCertificate.html' title='rusoto::cloudfront::ViewerCertificate'>ViewerCertificate</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-18986' class='srclink' href='../../src/rusoto/home/travis/build/rusoto/rusoto/target/debug/build/rusoto-eb4f6d3294d9c978/out/cloudfront.rs.html#8736' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><span id='default.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../rusoto/cloudfront/struct.ViewerCertificate.html' title='rusoto::cloudfront::ViewerCertificate'>ViewerCertificate</a></code></span></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../rusoto/cloudfront/struct.ViewerCertificate.html' title='rusoto::cloudfront::ViewerCertificate'>ViewerCertificate</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-18988' class='srclink' href='../../src/rusoto/home/travis/build/rusoto/rusoto/target/debug/build/rusoto-eb4f6d3294d9c978/out/cloudfront.rs.html#8736' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "rusoto";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

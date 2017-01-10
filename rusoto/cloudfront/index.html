@@ -1,0 +1,2090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `cloudfront` mod in crate `rusoto`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, cloudfront">
+
+    <title>rusoto::cloudfront - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>rusoto</a></p><script>window.sidebarCurrent = {name: 'cloudfront', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>rusoto</a>::<wbr><a class='mod' href=''>cloudfront</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-425' class='srclink' href='../../src/rusoto/src/cloudfront.rs.html#1-3' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>The CloudFront API.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ActiveTrustedSigners.html'
+                                  title='rusoto::cloudfront::ActiveTrustedSigners'>ActiveTrustedSigners</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that lists the AWS accounts, if any, that you included in the TrustedSigners complex type for the default cache behavior or for any of the other cache behaviors for this distribution. These are accounts that you want to allow to create signed URLs for private content.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ActiveTrustedSignersSerializer.html'
+                                  title='rusoto::cloudfront::ActiveTrustedSignersSerializer'>ActiveTrustedSignersSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AliasListSerializer.html'
+                                  title='rusoto::cloudfront::AliasListSerializer'>AliasListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Aliases.html'
+                                  title='rusoto::cloudfront::Aliases'>Aliases</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that contains information about CNAMEs (alternate domain names), if any, for this distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AliasesSerializer.html'
+                                  title='rusoto::cloudfront::AliasesSerializer'>AliasesSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AllowedMethods.html'
+                                  title='rusoto::cloudfront::AllowedMethods'>AllowedMethods</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that controls which HTTP methods CloudFront processes and forwards to your Amazon S3 bucket or your custom origin. There are three choices: - CloudFront forwards only GET and HEAD requests. - CloudFront forwards only GET, HEAD and OPTIONS requests. - CloudFront forwards GET, HEAD, OPTIONS, PUT, PATCH, POST, and DELETE requests. If you pick the third choice, you may need to restrict access to your Amazon S3 bucket or to your custom origin so users can&#39;t perform operations that you don&#39;t want them to. For example, you may not want users to have permission to delete objects from your origin.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AllowedMethodsSerializer.html'
+                                  title='rusoto::cloudfront::AllowedMethodsSerializer'>AllowedMethodsSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AwsAccountNumberListSerializer.html'
+                                  title='rusoto::cloudfront::AwsAccountNumberListSerializer'>AwsAccountNumberListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.BooleanSerializer.html'
+                                  title='rusoto::cloudfront::BooleanSerializer'>BooleanSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CacheBehavior.html'
+                                  title='rusoto::cloudfront::CacheBehavior'>CacheBehavior</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that describes how CloudFront processes requests. You can create up to 10 cache behaviors.You must create at least as many cache behaviors (including the default cache behavior) as you have origins if you want CloudFront to distribute objects from all of the origins. Each cache behavior specifies the one origin from which you want CloudFront to get objects. If you have two origins and only the default cache behavior, the default cache behavior will cause CloudFront to get objects from one of the origins, but the other origin will never be used. If you don&#39;t want to specify any cache behaviors, include only an empty CacheBehaviors element. Don&#39;t include an empty CacheBehavior element, or CloudFront returns a MalformedXML error. To delete all cache behaviors in an existing distribution, update the distribution configuration and include only an empty CacheBehaviors element. To add, change, or remove one or more cache behaviors, update the distribution configuration and specify all of the cache behaviors that you want to include in the updated distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CacheBehaviorListSerializer.html'
+                                  title='rusoto::cloudfront::CacheBehaviorListSerializer'>CacheBehaviorListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CacheBehaviorSerializer.html'
+                                  title='rusoto::cloudfront::CacheBehaviorSerializer'>CacheBehaviorSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CacheBehaviors.html'
+                                  title='rusoto::cloudfront::CacheBehaviors'>CacheBehaviors</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that contains zero or more CacheBehavior elements.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CacheBehaviorsSerializer.html'
+                                  title='rusoto::cloudfront::CacheBehaviorsSerializer'>CacheBehaviorsSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CachedMethods.html'
+                                  title='rusoto::cloudfront::CachedMethods'>CachedMethods</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that controls whether CloudFront caches the response to requests using the specified HTTP methods. There are two choices: - CloudFront caches responses to GET and HEAD requests. - CloudFront caches responses to GET, HEAD, and OPTIONS requests. If you pick the second choice for your S3 Origin, you may need to forward Access-Control-Request-Method, Access-Control-Request-Headers and Origin headers for the responses to be cached correctly.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CachedMethodsSerializer.html'
+                                  title='rusoto::cloudfront::CachedMethodsSerializer'>CachedMethodsSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CertificateSourceSerializer.html'
+                                  title='rusoto::cloudfront::CertificateSourceSerializer'>CertificateSourceSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CloudFrontClient.html'
+                                  title='rusoto::cloudfront::CloudFrontClient'>CloudFrontClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the CloudFront API.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CloudFrontOriginAccessIdentity.html'
+                                  title='rusoto::cloudfront::CloudFrontOriginAccessIdentity'>CloudFrontOriginAccessIdentity</a></td>
+                           <td class='docblock-short'>
+                                <p>CloudFront origin access identity.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CloudFrontOriginAccessIdentityConfig.html'
+                                  title='rusoto::cloudfront::CloudFrontOriginAccessIdentityConfig'>CloudFrontOriginAccessIdentityConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>Origin access identity configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CloudFrontOriginAccessIdentityConfigSerializer.html'
+                                  title='rusoto::cloudfront::CloudFrontOriginAccessIdentityConfigSerializer'>CloudFrontOriginAccessIdentityConfigSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CloudFrontOriginAccessIdentityList.html'
+                                  title='rusoto::cloudfront::CloudFrontOriginAccessIdentityList'>CloudFrontOriginAccessIdentityList</a></td>
+                           <td class='docblock-short'>
+                                <p>The CloudFrontOriginAccessIdentityList type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CloudFrontOriginAccessIdentityListSerializer.html'
+                                  title='rusoto::cloudfront::CloudFrontOriginAccessIdentityListSerializer'>CloudFrontOriginAccessIdentityListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CloudFrontOriginAccessIdentitySerializer.html'
+                                  title='rusoto::cloudfront::CloudFrontOriginAccessIdentitySerializer'>CloudFrontOriginAccessIdentitySerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CloudFrontOriginAccessIdentitySummary.html'
+                                  title='rusoto::cloudfront::CloudFrontOriginAccessIdentitySummary'>CloudFrontOriginAccessIdentitySummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Summary of the information about a CloudFront origin access identity.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CloudFrontOriginAccessIdentitySummaryListSerializer.html'
+                                  title='rusoto::cloudfront::CloudFrontOriginAccessIdentitySummaryListSerializer'>CloudFrontOriginAccessIdentitySummaryListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CloudFrontOriginAccessIdentitySummarySerializer.html'
+                                  title='rusoto::cloudfront::CloudFrontOriginAccessIdentitySummarySerializer'>CloudFrontOriginAccessIdentitySummarySerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CookieNameListSerializer.html'
+                                  title='rusoto::cloudfront::CookieNameListSerializer'>CookieNameListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CookieNames.html'
+                                  title='rusoto::cloudfront::CookieNames'>CookieNames</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that specifies the whitelisted cookies, if any, that you want CloudFront to forward to your origin that is associated with this cache behavior.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CookieNamesSerializer.html'
+                                  title='rusoto::cloudfront::CookieNamesSerializer'>CookieNamesSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CookiePreference.html'
+                                  title='rusoto::cloudfront::CookiePreference'>CookiePreference</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that specifies the cookie preferences associated with this cache behavior.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CookiePreferenceSerializer.html'
+                                  title='rusoto::cloudfront::CookiePreferenceSerializer'>CookiePreferenceSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateCloudFrontOriginAccessIdentityRequest.html'
+                                  title='rusoto::cloudfront::CreateCloudFrontOriginAccessIdentityRequest'>CreateCloudFrontOriginAccessIdentityRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to create a new origin access identity.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateCloudFrontOriginAccessIdentityResult.html'
+                                  title='rusoto::cloudfront::CreateCloudFrontOriginAccessIdentityResult'>CreateCloudFrontOriginAccessIdentityResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateCloudFrontOriginAccessIdentityResultSerializer.html'
+                                  title='rusoto::cloudfront::CreateCloudFrontOriginAccessIdentityResultSerializer'>CreateCloudFrontOriginAccessIdentityResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateDistributionRequest.html'
+                                  title='rusoto::cloudfront::CreateDistributionRequest'>CreateDistributionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to create a new distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateDistributionResult.html'
+                                  title='rusoto::cloudfront::CreateDistributionResult'>CreateDistributionResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateDistributionResultSerializer.html'
+                                  title='rusoto::cloudfront::CreateDistributionResultSerializer'>CreateDistributionResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateDistributionWithTagsRequest.html'
+                                  title='rusoto::cloudfront::CreateDistributionWithTagsRequest'>CreateDistributionWithTagsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to create a new distribution with tags</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateDistributionWithTagsResult.html'
+                                  title='rusoto::cloudfront::CreateDistributionWithTagsResult'>CreateDistributionWithTagsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateDistributionWithTagsResultSerializer.html'
+                                  title='rusoto::cloudfront::CreateDistributionWithTagsResultSerializer'>CreateDistributionWithTagsResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateInvalidationRequest.html'
+                                  title='rusoto::cloudfront::CreateInvalidationRequest'>CreateInvalidationRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to create an invalidation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateInvalidationResult.html'
+                                  title='rusoto::cloudfront::CreateInvalidationResult'>CreateInvalidationResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateInvalidationResultSerializer.html'
+                                  title='rusoto::cloudfront::CreateInvalidationResultSerializer'>CreateInvalidationResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateStreamingDistributionRequest.html'
+                                  title='rusoto::cloudfront::CreateStreamingDistributionRequest'>CreateStreamingDistributionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to create a new streaming distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateStreamingDistributionResult.html'
+                                  title='rusoto::cloudfront::CreateStreamingDistributionResult'>CreateStreamingDistributionResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateStreamingDistributionResultSerializer.html'
+                                  title='rusoto::cloudfront::CreateStreamingDistributionResultSerializer'>CreateStreamingDistributionResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateStreamingDistributionWithTagsRequest.html'
+                                  title='rusoto::cloudfront::CreateStreamingDistributionWithTagsRequest'>CreateStreamingDistributionWithTagsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to create a new streaming distribution with tags.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateStreamingDistributionWithTagsResult.html'
+                                  title='rusoto::cloudfront::CreateStreamingDistributionWithTagsResult'>CreateStreamingDistributionWithTagsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CreateStreamingDistributionWithTagsResultSerializer.html'
+                                  title='rusoto::cloudfront::CreateStreamingDistributionWithTagsResultSerializer'>CreateStreamingDistributionWithTagsResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CustomErrorResponse.html'
+                                  title='rusoto::cloudfront::CustomErrorResponse'>CustomErrorResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that describes how you&#39;d prefer CloudFront to respond to requests that result in either a 4xx or 5xx response. You can control whether a custom error page should be displayed, what the desired response code should be for this error page and how long should the error response be cached by CloudFront. If you don&#39;t want to specify any custom error responses, include only an empty CustomErrorResponses element. To delete all custom error responses in an existing distribution, update the distribution configuration and include only an empty CustomErrorResponses element. To add, change, or remove one or more custom error responses, update the distribution configuration and specify all of the custom error responses that you want to include in the updated distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CustomErrorResponseListSerializer.html'
+                                  title='rusoto::cloudfront::CustomErrorResponseListSerializer'>CustomErrorResponseListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CustomErrorResponseSerializer.html'
+                                  title='rusoto::cloudfront::CustomErrorResponseSerializer'>CustomErrorResponseSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CustomErrorResponses.html'
+                                  title='rusoto::cloudfront::CustomErrorResponses'>CustomErrorResponses</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that contains zero or more CustomErrorResponse elements.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CustomErrorResponsesSerializer.html'
+                                  title='rusoto::cloudfront::CustomErrorResponsesSerializer'>CustomErrorResponsesSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CustomHeaders.html'
+                                  title='rusoto::cloudfront::CustomHeaders'>CustomHeaders</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that contains the list of Custom Headers for each origin.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CustomHeadersSerializer.html'
+                                  title='rusoto::cloudfront::CustomHeadersSerializer'>CustomHeadersSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CustomOriginConfig.html'
+                                  title='rusoto::cloudfront::CustomOriginConfig'>CustomOriginConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>A customer origin.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CustomOriginConfigSerializer.html'
+                                  title='rusoto::cloudfront::CustomOriginConfigSerializer'>CustomOriginConfigSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DefaultCacheBehavior.html'
+                                  title='rusoto::cloudfront::DefaultCacheBehavior'>DefaultCacheBehavior</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that describes the default cache behavior if you do not specify a CacheBehavior element or if files don&#39;t match any of the values of PathPattern in CacheBehavior elements.You must create exactly one default cache behavior.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DefaultCacheBehaviorSerializer.html'
+                                  title='rusoto::cloudfront::DefaultCacheBehaviorSerializer'>DefaultCacheBehaviorSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DeleteCloudFrontOriginAccessIdentityRequest.html'
+                                  title='rusoto::cloudfront::DeleteCloudFrontOriginAccessIdentityRequest'>DeleteCloudFrontOriginAccessIdentityRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to delete a origin access identity.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DeleteDistributionRequest.html'
+                                  title='rusoto::cloudfront::DeleteDistributionRequest'>DeleteDistributionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to delete a distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DeleteStreamingDistributionRequest.html'
+                                  title='rusoto::cloudfront::DeleteStreamingDistributionRequest'>DeleteStreamingDistributionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to delete a streaming distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Distribution.html'
+                                  title='rusoto::cloudfront::Distribution'>Distribution</a></td>
+                           <td class='docblock-short'>
+                                <p>A distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DistributionConfig.html'
+                                  title='rusoto::cloudfront::DistributionConfig'>DistributionConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>A distribution Configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DistributionConfigSerializer.html'
+                                  title='rusoto::cloudfront::DistributionConfigSerializer'>DistributionConfigSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DistributionConfigWithTags.html'
+                                  title='rusoto::cloudfront::DistributionConfigWithTags'>DistributionConfigWithTags</a></td>
+                           <td class='docblock-short'>
+                                <p>A distribution Configuration and a list of tags to be associated with the distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DistributionConfigWithTagsSerializer.html'
+                                  title='rusoto::cloudfront::DistributionConfigWithTagsSerializer'>DistributionConfigWithTagsSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DistributionList.html'
+                                  title='rusoto::cloudfront::DistributionList'>DistributionList</a></td>
+                           <td class='docblock-short'>
+                                <p>A distribution list.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DistributionListSerializer.html'
+                                  title='rusoto::cloudfront::DistributionListSerializer'>DistributionListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DistributionSerializer.html'
+                                  title='rusoto::cloudfront::DistributionSerializer'>DistributionSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DistributionSummary.html'
+                                  title='rusoto::cloudfront::DistributionSummary'>DistributionSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>A summary of the information for an Amazon CloudFront distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DistributionSummaryListSerializer.html'
+                                  title='rusoto::cloudfront::DistributionSummaryListSerializer'>DistributionSummaryListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DistributionSummarySerializer.html'
+                                  title='rusoto::cloudfront::DistributionSummarySerializer'>DistributionSummarySerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ForwardedValues.html'
+                                  title='rusoto::cloudfront::ForwardedValues'>ForwardedValues</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that specifies how CloudFront handles query strings, cookies and headers.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ForwardedValuesSerializer.html'
+                                  title='rusoto::cloudfront::ForwardedValuesSerializer'>ForwardedValuesSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GeoRestriction.html'
+                                  title='rusoto::cloudfront::GeoRestriction'>GeoRestriction</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that controls the countries in which your content is distributed. For more information about geo restriction, go to Customizing Error Responses in the Amazon CloudFront Developer Guide. CloudFront determines the location of your users using MaxMind GeoIP databases. For information about the accuracy of these databases, see How accurate are your GeoIP databases? on the MaxMind website.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GeoRestrictionSerializer.html'
+                                  title='rusoto::cloudfront::GeoRestrictionSerializer'>GeoRestrictionSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GeoRestrictionTypeSerializer.html'
+                                  title='rusoto::cloudfront::GeoRestrictionTypeSerializer'>GeoRestrictionTypeSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetCloudFrontOriginAccessIdentityConfigRequest.html'
+                                  title='rusoto::cloudfront::GetCloudFrontOriginAccessIdentityConfigRequest'>GetCloudFrontOriginAccessIdentityConfigRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to get an origin access identity&#39;s configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetCloudFrontOriginAccessIdentityConfigResult.html'
+                                  title='rusoto::cloudfront::GetCloudFrontOriginAccessIdentityConfigResult'>GetCloudFrontOriginAccessIdentityConfigResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetCloudFrontOriginAccessIdentityConfigResultSerializer.html'
+                                  title='rusoto::cloudfront::GetCloudFrontOriginAccessIdentityConfigResultSerializer'>GetCloudFrontOriginAccessIdentityConfigResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetCloudFrontOriginAccessIdentityRequest.html'
+                                  title='rusoto::cloudfront::GetCloudFrontOriginAccessIdentityRequest'>GetCloudFrontOriginAccessIdentityRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to get an origin access identity&#39;s information.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetCloudFrontOriginAccessIdentityResult.html'
+                                  title='rusoto::cloudfront::GetCloudFrontOriginAccessIdentityResult'>GetCloudFrontOriginAccessIdentityResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetCloudFrontOriginAccessIdentityResultSerializer.html'
+                                  title='rusoto::cloudfront::GetCloudFrontOriginAccessIdentityResultSerializer'>GetCloudFrontOriginAccessIdentityResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetDistributionConfigRequest.html'
+                                  title='rusoto::cloudfront::GetDistributionConfigRequest'>GetDistributionConfigRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to get a distribution configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetDistributionConfigResult.html'
+                                  title='rusoto::cloudfront::GetDistributionConfigResult'>GetDistributionConfigResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetDistributionConfigResultSerializer.html'
+                                  title='rusoto::cloudfront::GetDistributionConfigResultSerializer'>GetDistributionConfigResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetDistributionRequest.html'
+                                  title='rusoto::cloudfront::GetDistributionRequest'>GetDistributionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to get a distribution&#39;s information.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetDistributionResult.html'
+                                  title='rusoto::cloudfront::GetDistributionResult'>GetDistributionResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetDistributionResultSerializer.html'
+                                  title='rusoto::cloudfront::GetDistributionResultSerializer'>GetDistributionResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetInvalidationRequest.html'
+                                  title='rusoto::cloudfront::GetInvalidationRequest'>GetInvalidationRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to get an invalidation&#39;s information.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetInvalidationResult.html'
+                                  title='rusoto::cloudfront::GetInvalidationResult'>GetInvalidationResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetInvalidationResultSerializer.html'
+                                  title='rusoto::cloudfront::GetInvalidationResultSerializer'>GetInvalidationResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetStreamingDistributionConfigRequest.html'
+                                  title='rusoto::cloudfront::GetStreamingDistributionConfigRequest'>GetStreamingDistributionConfigRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>To request to get a streaming distribution configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetStreamingDistributionConfigResult.html'
+                                  title='rusoto::cloudfront::GetStreamingDistributionConfigResult'>GetStreamingDistributionConfigResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetStreamingDistributionConfigResultSerializer.html'
+                                  title='rusoto::cloudfront::GetStreamingDistributionConfigResultSerializer'>GetStreamingDistributionConfigResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetStreamingDistributionRequest.html'
+                                  title='rusoto::cloudfront::GetStreamingDistributionRequest'>GetStreamingDistributionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to get a streaming distribution&#39;s information.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetStreamingDistributionResult.html'
+                                  title='rusoto::cloudfront::GetStreamingDistributionResult'>GetStreamingDistributionResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GetStreamingDistributionResultSerializer.html'
+                                  title='rusoto::cloudfront::GetStreamingDistributionResultSerializer'>GetStreamingDistributionResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.HeaderListSerializer.html'
+                                  title='rusoto::cloudfront::HeaderListSerializer'>HeaderListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Headers.html'
+                                  title='rusoto::cloudfront::Headers'>Headers</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that specifies the headers that you want CloudFront to forward to the origin for this cache behavior. For the headers that you specify, CloudFront also caches separate versions of a given object based on the header values in viewer requests; this is known as varying on headers. For example, suppose viewer requests for logo.jpg contain a custom Product header that has a value of either Acme or Apex, and you configure CloudFront to vary on the Product header. CloudFront forwards the Product header to the origin and caches the response from the origin once for each header value.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.HeadersSerializer.html'
+                                  title='rusoto::cloudfront::HeadersSerializer'>HeadersSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.HttpVersionSerializer.html'
+                                  title='rusoto::cloudfront::HttpVersionSerializer'>HttpVersionSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.IntegerSerializer.html'
+                                  title='rusoto::cloudfront::IntegerSerializer'>IntegerSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Invalidation.html'
+                                  title='rusoto::cloudfront::Invalidation'>Invalidation</a></td>
+                           <td class='docblock-short'>
+                                <p>An invalidation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.InvalidationBatch.html'
+                                  title='rusoto::cloudfront::InvalidationBatch'>InvalidationBatch</a></td>
+                           <td class='docblock-short'>
+                                <p>An invalidation batch.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.InvalidationBatchSerializer.html'
+                                  title='rusoto::cloudfront::InvalidationBatchSerializer'>InvalidationBatchSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.InvalidationList.html'
+                                  title='rusoto::cloudfront::InvalidationList'>InvalidationList</a></td>
+                           <td class='docblock-short'>
+                                <p>An invalidation list.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.InvalidationListSerializer.html'
+                                  title='rusoto::cloudfront::InvalidationListSerializer'>InvalidationListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.InvalidationSerializer.html'
+                                  title='rusoto::cloudfront::InvalidationSerializer'>InvalidationSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.InvalidationSummary.html'
+                                  title='rusoto::cloudfront::InvalidationSummary'>InvalidationSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Summary of an invalidation request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.InvalidationSummaryListSerializer.html'
+                                  title='rusoto::cloudfront::InvalidationSummaryListSerializer'>InvalidationSummaryListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.InvalidationSummarySerializer.html'
+                                  title='rusoto::cloudfront::InvalidationSummarySerializer'>InvalidationSummarySerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ItemSelectionSerializer.html'
+                                  title='rusoto::cloudfront::ItemSelectionSerializer'>ItemSelectionSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.KeyPairIdListSerializer.html'
+                                  title='rusoto::cloudfront::KeyPairIdListSerializer'>KeyPairIdListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.KeyPairIds.html'
+                                  title='rusoto::cloudfront::KeyPairIds'>KeyPairIds</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that lists the active CloudFront key pairs, if any, that are associated with AwsAccountNumber.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.KeyPairIdsSerializer.html'
+                                  title='rusoto::cloudfront::KeyPairIdsSerializer'>KeyPairIdsSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListCloudFrontOriginAccessIdentitiesRequest.html'
+                                  title='rusoto::cloudfront::ListCloudFrontOriginAccessIdentitiesRequest'>ListCloudFrontOriginAccessIdentitiesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to list origin access identities.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListCloudFrontOriginAccessIdentitiesResult.html'
+                                  title='rusoto::cloudfront::ListCloudFrontOriginAccessIdentitiesResult'>ListCloudFrontOriginAccessIdentitiesResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListCloudFrontOriginAccessIdentitiesResultSerializer.html'
+                                  title='rusoto::cloudfront::ListCloudFrontOriginAccessIdentitiesResultSerializer'>ListCloudFrontOriginAccessIdentitiesResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListDistributionsByWebACLIdRequest.html'
+                                  title='rusoto::cloudfront::ListDistributionsByWebACLIdRequest'>ListDistributionsByWebACLIdRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to list distributions that are associated with a specified AWS WAF web ACL.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListDistributionsByWebACLIdResult.html'
+                                  title='rusoto::cloudfront::ListDistributionsByWebACLIdResult'>ListDistributionsByWebACLIdResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The response to a request to list the distributions that are associated with a specified AWS WAF web ACL.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListDistributionsByWebACLIdResultSerializer.html'
+                                  title='rusoto::cloudfront::ListDistributionsByWebACLIdResultSerializer'>ListDistributionsByWebACLIdResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListDistributionsRequest.html'
+                                  title='rusoto::cloudfront::ListDistributionsRequest'>ListDistributionsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to list your distributions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListDistributionsResult.html'
+                                  title='rusoto::cloudfront::ListDistributionsResult'>ListDistributionsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListDistributionsResultSerializer.html'
+                                  title='rusoto::cloudfront::ListDistributionsResultSerializer'>ListDistributionsResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListInvalidationsRequest.html'
+                                  title='rusoto::cloudfront::ListInvalidationsRequest'>ListInvalidationsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to list invalidations.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListInvalidationsResult.html'
+                                  title='rusoto::cloudfront::ListInvalidationsResult'>ListInvalidationsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListInvalidationsResultSerializer.html'
+                                  title='rusoto::cloudfront::ListInvalidationsResultSerializer'>ListInvalidationsResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListStreamingDistributionsRequest.html'
+                                  title='rusoto::cloudfront::ListStreamingDistributionsRequest'>ListStreamingDistributionsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to list your streaming distributions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListStreamingDistributionsResult.html'
+                                  title='rusoto::cloudfront::ListStreamingDistributionsResult'>ListStreamingDistributionsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListStreamingDistributionsResultSerializer.html'
+                                  title='rusoto::cloudfront::ListStreamingDistributionsResultSerializer'>ListStreamingDistributionsResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListTagsForResourceRequest.html'
+                                  title='rusoto::cloudfront::ListTagsForResourceRequest'>ListTagsForResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to list tags for a CloudFront resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListTagsForResourceResult.html'
+                                  title='rusoto::cloudfront::ListTagsForResourceResult'>ListTagsForResourceResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListTagsForResourceResultSerializer.html'
+                                  title='rusoto::cloudfront::ListTagsForResourceResultSerializer'>ListTagsForResourceResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.LocationListSerializer.html'
+                                  title='rusoto::cloudfront::LocationListSerializer'>LocationListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.LoggingConfig.html'
+                                  title='rusoto::cloudfront::LoggingConfig'>LoggingConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that controls whether access logs are written for the distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.LoggingConfigSerializer.html'
+                                  title='rusoto::cloudfront::LoggingConfigSerializer'>LoggingConfigSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.LongSerializer.html'
+                                  title='rusoto::cloudfront::LongSerializer'>LongSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.MethodSerializer.html'
+                                  title='rusoto::cloudfront::MethodSerializer'>MethodSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.MethodsListSerializer.html'
+                                  title='rusoto::cloudfront::MethodsListSerializer'>MethodsListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.MinimumProtocolVersionSerializer.html'
+                                  title='rusoto::cloudfront::MinimumProtocolVersionSerializer'>MinimumProtocolVersionSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Origin.html'
+                                  title='rusoto::cloudfront::Origin'>Origin</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that describes the Amazon S3 bucket or the HTTP server (for example, a web server) from which CloudFront gets your files.You must create at least one origin.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.OriginCustomHeader.html'
+                                  title='rusoto::cloudfront::OriginCustomHeader'>OriginCustomHeader</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that contains information related to a Header</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.OriginCustomHeaderSerializer.html'
+                                  title='rusoto::cloudfront::OriginCustomHeaderSerializer'>OriginCustomHeaderSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.OriginCustomHeadersListSerializer.html'
+                                  title='rusoto::cloudfront::OriginCustomHeadersListSerializer'>OriginCustomHeadersListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.OriginListSerializer.html'
+                                  title='rusoto::cloudfront::OriginListSerializer'>OriginListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.OriginProtocolPolicySerializer.html'
+                                  title='rusoto::cloudfront::OriginProtocolPolicySerializer'>OriginProtocolPolicySerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.OriginSerializer.html'
+                                  title='rusoto::cloudfront::OriginSerializer'>OriginSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.OriginSslProtocols.html'
+                                  title='rusoto::cloudfront::OriginSslProtocols'>OriginSslProtocols</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that contains the list of SSL/TLS protocols that you want CloudFront to use when communicating with your origin over HTTPS.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.OriginSslProtocolsSerializer.html'
+                                  title='rusoto::cloudfront::OriginSslProtocolsSerializer'>OriginSslProtocolsSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Origins.html'
+                                  title='rusoto::cloudfront::Origins'>Origins</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that contains information about origins for this distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.OriginsSerializer.html'
+                                  title='rusoto::cloudfront::OriginsSerializer'>OriginsSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.PathListSerializer.html'
+                                  title='rusoto::cloudfront::PathListSerializer'>PathListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Paths.html'
+                                  title='rusoto::cloudfront::Paths'>Paths</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that contains information about the objects that you want to invalidate.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.PathsSerializer.html'
+                                  title='rusoto::cloudfront::PathsSerializer'>PathsSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.PriceClassSerializer.html'
+                                  title='rusoto::cloudfront::PriceClassSerializer'>PriceClassSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.QueryStringCacheKeys.html'
+                                  title='rusoto::cloudfront::QueryStringCacheKeys'>QueryStringCacheKeys</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.QueryStringCacheKeysListSerializer.html'
+                                  title='rusoto::cloudfront::QueryStringCacheKeysListSerializer'>QueryStringCacheKeysListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.QueryStringCacheKeysSerializer.html'
+                                  title='rusoto::cloudfront::QueryStringCacheKeysSerializer'>QueryStringCacheKeysSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ResourceARNSerializer.html'
+                                  title='rusoto::cloudfront::ResourceARNSerializer'>ResourceARNSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Restrictions.html'
+                                  title='rusoto::cloudfront::Restrictions'>Restrictions</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that identifies ways in which you want to restrict distribution of your content.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.RestrictionsSerializer.html'
+                                  title='rusoto::cloudfront::RestrictionsSerializer'>RestrictionsSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.S3Origin.html'
+                                  title='rusoto::cloudfront::S3Origin'>S3Origin</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that contains information about the Amazon S3 bucket from which you want CloudFront to get your media files for distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.S3OriginConfig.html'
+                                  title='rusoto::cloudfront::S3OriginConfig'>S3OriginConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that contains information about the Amazon S3 origin. If the origin is a custom origin, use the CustomOriginConfig element instead.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.S3OriginConfigSerializer.html'
+                                  title='rusoto::cloudfront::S3OriginConfigSerializer'>S3OriginConfigSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.S3OriginSerializer.html'
+                                  title='rusoto::cloudfront::S3OriginSerializer'>S3OriginSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SSLSupportMethodSerializer.html'
+                                  title='rusoto::cloudfront::SSLSupportMethodSerializer'>SSLSupportMethodSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Signer.html'
+                                  title='rusoto::cloudfront::Signer'>Signer</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that lists the AWS accounts that were included in the TrustedSigners complex type, as well as their active CloudFront key pair IDs, if any.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SignerListSerializer.html'
+                                  title='rusoto::cloudfront::SignerListSerializer'>SignerListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SignerSerializer.html'
+                                  title='rusoto::cloudfront::SignerSerializer'>SignerSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SslProtocolSerializer.html'
+                                  title='rusoto::cloudfront::SslProtocolSerializer'>SslProtocolSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SslProtocolsListSerializer.html'
+                                  title='rusoto::cloudfront::SslProtocolsListSerializer'>SslProtocolsListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.StreamingDistribution.html'
+                                  title='rusoto::cloudfront::StreamingDistribution'>StreamingDistribution</a></td>
+                           <td class='docblock-short'>
+                                <p>A streaming distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.StreamingDistributionConfig.html'
+                                  title='rusoto::cloudfront::StreamingDistributionConfig'>StreamingDistributionConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>The configuration for the streaming distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.StreamingDistributionConfigSerializer.html'
+                                  title='rusoto::cloudfront::StreamingDistributionConfigSerializer'>StreamingDistributionConfigSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.StreamingDistributionConfigWithTags.html'
+                                  title='rusoto::cloudfront::StreamingDistributionConfigWithTags'>StreamingDistributionConfigWithTags</a></td>
+                           <td class='docblock-short'>
+                                <p>A streaming distribution Configuration and a list of tags to be associated with the streaming distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.StreamingDistributionConfigWithTagsSerializer.html'
+                                  title='rusoto::cloudfront::StreamingDistributionConfigWithTagsSerializer'>StreamingDistributionConfigWithTagsSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.StreamingDistributionList.html'
+                                  title='rusoto::cloudfront::StreamingDistributionList'>StreamingDistributionList</a></td>
+                           <td class='docblock-short'>
+                                <p>A streaming distribution list.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.StreamingDistributionListSerializer.html'
+                                  title='rusoto::cloudfront::StreamingDistributionListSerializer'>StreamingDistributionListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.StreamingDistributionSerializer.html'
+                                  title='rusoto::cloudfront::StreamingDistributionSerializer'>StreamingDistributionSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.StreamingDistributionSummary.html'
+                                  title='rusoto::cloudfront::StreamingDistributionSummary'>StreamingDistributionSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>A summary of the information for an Amazon CloudFront streaming distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.StreamingDistributionSummaryListSerializer.html'
+                                  title='rusoto::cloudfront::StreamingDistributionSummaryListSerializer'>StreamingDistributionSummaryListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.StreamingDistributionSummarySerializer.html'
+                                  title='rusoto::cloudfront::StreamingDistributionSummarySerializer'>StreamingDistributionSummarySerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.StreamingLoggingConfig.html'
+                                  title='rusoto::cloudfront::StreamingLoggingConfig'>StreamingLoggingConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that controls whether access logs are written for this streaming distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.StreamingLoggingConfigSerializer.html'
+                                  title='rusoto::cloudfront::StreamingLoggingConfigSerializer'>StreamingLoggingConfigSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.StringSerializer.html'
+                                  title='rusoto::cloudfront::StringSerializer'>StringSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Tag.html'
+                                  title='rusoto::cloudfront::Tag'>Tag</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that contains Tag key and Tag value.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TagKeyListSerializer.html'
+                                  title='rusoto::cloudfront::TagKeyListSerializer'>TagKeyListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TagKeySerializer.html'
+                                  title='rusoto::cloudfront::TagKeySerializer'>TagKeySerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TagKeys.html'
+                                  title='rusoto::cloudfront::TagKeys'>TagKeys</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that contains zero or more Tag elements.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TagKeysSerializer.html'
+                                  title='rusoto::cloudfront::TagKeysSerializer'>TagKeysSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TagListSerializer.html'
+                                  title='rusoto::cloudfront::TagListSerializer'>TagListSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TagResourceRequest.html'
+                                  title='rusoto::cloudfront::TagResourceRequest'>TagResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to add tags to a CloudFront resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TagSerializer.html'
+                                  title='rusoto::cloudfront::TagSerializer'>TagSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TagValueSerializer.html'
+                                  title='rusoto::cloudfront::TagValueSerializer'>TagValueSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Tags.html'
+                                  title='rusoto::cloudfront::Tags'>Tags</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that contains zero or more Tag elements.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TagsSerializer.html'
+                                  title='rusoto::cloudfront::TagsSerializer'>TagsSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TimestampSerializer.html'
+                                  title='rusoto::cloudfront::TimestampSerializer'>TimestampSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TrustedSigners.html'
+                                  title='rusoto::cloudfront::TrustedSigners'>TrustedSigners</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that specifies the AWS accounts, if any, that you want to allow to create signed URLs for private content. If you want to require signed URLs in requests for objects in the target origin that match the PathPattern for this cache behavior, specify true for Enabled, and specify the applicable values for Quantity and Items. For more information, go to Using a Signed URL to Serve Private Content in the Amazon CloudFront Developer Guide. If you don&#39;t want to require signed URLs in requests for objects that match PathPattern, specify false for Enabled and 0 for Quantity. Omit Items. To add, change, or remove one or more trusted signers, change Enabled to true (if it&#39;s currently false), change Quantity as applicable, and specify all of the trusted signers that you want to include in the updated distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TrustedSignersSerializer.html'
+                                  title='rusoto::cloudfront::TrustedSignersSerializer'>TrustedSignersSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.UntagResourceRequest.html'
+                                  title='rusoto::cloudfront::UntagResourceRequest'>UntagResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to remove tags from a CloudFront resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.UpdateCloudFrontOriginAccessIdentityRequest.html'
+                                  title='rusoto::cloudfront::UpdateCloudFrontOriginAccessIdentityRequest'>UpdateCloudFrontOriginAccessIdentityRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to update an origin access identity.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.UpdateCloudFrontOriginAccessIdentityResult.html'
+                                  title='rusoto::cloudfront::UpdateCloudFrontOriginAccessIdentityResult'>UpdateCloudFrontOriginAccessIdentityResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.UpdateCloudFrontOriginAccessIdentityResultSerializer.html'
+                                  title='rusoto::cloudfront::UpdateCloudFrontOriginAccessIdentityResultSerializer'>UpdateCloudFrontOriginAccessIdentityResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.UpdateDistributionRequest.html'
+                                  title='rusoto::cloudfront::UpdateDistributionRequest'>UpdateDistributionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to update a distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.UpdateDistributionResult.html'
+                                  title='rusoto::cloudfront::UpdateDistributionResult'>UpdateDistributionResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.UpdateDistributionResultSerializer.html'
+                                  title='rusoto::cloudfront::UpdateDistributionResultSerializer'>UpdateDistributionResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.UpdateStreamingDistributionRequest.html'
+                                  title='rusoto::cloudfront::UpdateStreamingDistributionRequest'>UpdateStreamingDistributionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to update a streaming distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.UpdateStreamingDistributionResult.html'
+                                  title='rusoto::cloudfront::UpdateStreamingDistributionResult'>UpdateStreamingDistributionResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The returned result of the corresponding request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.UpdateStreamingDistributionResultSerializer.html'
+                                  title='rusoto::cloudfront::UpdateStreamingDistributionResultSerializer'>UpdateStreamingDistributionResultSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ViewerCertificate.html'
+                                  title='rusoto::cloudfront::ViewerCertificate'>ViewerCertificate</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that contains information about viewer certificates for this distribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ViewerCertificateSerializer.html'
+                                  title='rusoto::cloudfront::ViewerCertificateSerializer'>ViewerCertificateSerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ViewerProtocolPolicySerializer.html'
+                                  title='rusoto::cloudfront::ViewerProtocolPolicySerializer'>ViewerProtocolPolicySerializer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CreateCloudFrontOriginAccessIdentityError.html'
+                                  title='rusoto::cloudfront::CreateCloudFrontOriginAccessIdentityError'>CreateCloudFrontOriginAccessIdentityError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateCloudFrontOriginAccessIdentity</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CreateDistributionError.html'
+                                  title='rusoto::cloudfront::CreateDistributionError'>CreateDistributionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDistribution</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CreateDistributionWithTagsError.html'
+                                  title='rusoto::cloudfront::CreateDistributionWithTagsError'>CreateDistributionWithTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDistributionWithTags</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CreateInvalidationError.html'
+                                  title='rusoto::cloudfront::CreateInvalidationError'>CreateInvalidationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateInvalidation</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CreateStreamingDistributionError.html'
+                                  title='rusoto::cloudfront::CreateStreamingDistributionError'>CreateStreamingDistributionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateStreamingDistribution</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CreateStreamingDistributionWithTagsError.html'
+                                  title='rusoto::cloudfront::CreateStreamingDistributionWithTagsError'>CreateStreamingDistributionWithTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateStreamingDistributionWithTags</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.DeleteCloudFrontOriginAccessIdentityError.html'
+                                  title='rusoto::cloudfront::DeleteCloudFrontOriginAccessIdentityError'>DeleteCloudFrontOriginAccessIdentityError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteCloudFrontOriginAccessIdentity</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.DeleteDistributionError.html'
+                                  title='rusoto::cloudfront::DeleteDistributionError'>DeleteDistributionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDistribution</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.DeleteStreamingDistributionError.html'
+                                  title='rusoto::cloudfront::DeleteStreamingDistributionError'>DeleteStreamingDistributionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteStreamingDistribution</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.GetCloudFrontOriginAccessIdentityConfigError.html'
+                                  title='rusoto::cloudfront::GetCloudFrontOriginAccessIdentityConfigError'>GetCloudFrontOriginAccessIdentityConfigError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetCloudFrontOriginAccessIdentityConfig</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.GetCloudFrontOriginAccessIdentityError.html'
+                                  title='rusoto::cloudfront::GetCloudFrontOriginAccessIdentityError'>GetCloudFrontOriginAccessIdentityError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetCloudFrontOriginAccessIdentity</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.GetDistributionConfigError.html'
+                                  title='rusoto::cloudfront::GetDistributionConfigError'>GetDistributionConfigError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDistributionConfig</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.GetDistributionError.html'
+                                  title='rusoto::cloudfront::GetDistributionError'>GetDistributionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDistribution</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.GetInvalidationError.html'
+                                  title='rusoto::cloudfront::GetInvalidationError'>GetInvalidationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetInvalidation</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.GetStreamingDistributionConfigError.html'
+                                  title='rusoto::cloudfront::GetStreamingDistributionConfigError'>GetStreamingDistributionConfigError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetStreamingDistributionConfig</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.GetStreamingDistributionError.html'
+                                  title='rusoto::cloudfront::GetStreamingDistributionError'>GetStreamingDistributionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetStreamingDistribution</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.ListCloudFrontOriginAccessIdentitiesError.html'
+                                  title='rusoto::cloudfront::ListCloudFrontOriginAccessIdentitiesError'>ListCloudFrontOriginAccessIdentitiesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListCloudFrontOriginAccessIdentities</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.ListDistributionsByWebACLIdError.html'
+                                  title='rusoto::cloudfront::ListDistributionsByWebACLIdError'>ListDistributionsByWebACLIdError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListDistributionsByWebACLId</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.ListDistributionsError.html'
+                                  title='rusoto::cloudfront::ListDistributionsError'>ListDistributionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListDistributions</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.ListInvalidationsError.html'
+                                  title='rusoto::cloudfront::ListInvalidationsError'>ListInvalidationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListInvalidations</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.ListStreamingDistributionsError.html'
+                                  title='rusoto::cloudfront::ListStreamingDistributionsError'>ListStreamingDistributionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListStreamingDistributions</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.ListTagsForResourceError.html'
+                                  title='rusoto::cloudfront::ListTagsForResourceError'>ListTagsForResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListTagsForResource</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.TagResourceError.html'
+                                  title='rusoto::cloudfront::TagResourceError'>TagResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by TagResource</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.UntagResourceError.html'
+                                  title='rusoto::cloudfront::UntagResourceError'>UntagResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UntagResource</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.UpdateCloudFrontOriginAccessIdentityError.html'
+                                  title='rusoto::cloudfront::UpdateCloudFrontOriginAccessIdentityError'>UpdateCloudFrontOriginAccessIdentityError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateCloudFrontOriginAccessIdentity</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.UpdateDistributionError.html'
+                                  title='rusoto::cloudfront::UpdateDistributionError'>UpdateDistributionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateDistribution</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.UpdateStreamingDistributionError.html'
+                                  title='rusoto::cloudfront::UpdateStreamingDistributionError'>UpdateStreamingDistributionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateStreamingDistribution</p>
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.AliasList.html'
+                                  title='rusoto::cloudfront::AliasList'>AliasList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.AwsAccountNumberList.html'
+                                  title='rusoto::cloudfront::AwsAccountNumberList'>AwsAccountNumberList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Boolean.html'
+                                  title='rusoto::cloudfront::Boolean'>Boolean</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.CacheBehaviorList.html'
+                                  title='rusoto::cloudfront::CacheBehaviorList'>CacheBehaviorList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.CertificateSource.html'
+                                  title='rusoto::cloudfront::CertificateSource'>CertificateSource</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.CloudFrontOriginAccessIdentitySummaryList.html'
+                                  title='rusoto::cloudfront::CloudFrontOriginAccessIdentitySummaryList'>CloudFrontOriginAccessIdentitySummaryList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.CookieNameList.html'
+                                  title='rusoto::cloudfront::CookieNameList'>CookieNameList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.CustomErrorResponseList.html'
+                                  title='rusoto::cloudfront::CustomErrorResponseList'>CustomErrorResponseList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.DistributionSummaryList.html'
+                                  title='rusoto::cloudfront::DistributionSummaryList'>DistributionSummaryList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.GeoRestrictionType.html'
+                                  title='rusoto::cloudfront::GeoRestrictionType'>GeoRestrictionType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.HeaderList.html'
+                                  title='rusoto::cloudfront::HeaderList'>HeaderList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.HttpVersion.html'
+                                  title='rusoto::cloudfront::HttpVersion'>HttpVersion</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Integer.html'
+                                  title='rusoto::cloudfront::Integer'>Integer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.InvalidationSummaryList.html'
+                                  title='rusoto::cloudfront::InvalidationSummaryList'>InvalidationSummaryList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.ItemSelection.html'
+                                  title='rusoto::cloudfront::ItemSelection'>ItemSelection</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.KeyPairIdList.html'
+                                  title='rusoto::cloudfront::KeyPairIdList'>KeyPairIdList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.LocationList.html'
+                                  title='rusoto::cloudfront::LocationList'>LocationList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Long.html'
+                                  title='rusoto::cloudfront::Long'>Long</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Method.html'
+                                  title='rusoto::cloudfront::Method'>Method</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.MethodsList.html'
+                                  title='rusoto::cloudfront::MethodsList'>MethodsList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.MinimumProtocolVersion.html'
+                                  title='rusoto::cloudfront::MinimumProtocolVersion'>MinimumProtocolVersion</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.OriginCustomHeadersList.html'
+                                  title='rusoto::cloudfront::OriginCustomHeadersList'>OriginCustomHeadersList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.OriginList.html'
+                                  title='rusoto::cloudfront::OriginList'>OriginList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.OriginProtocolPolicy.html'
+                                  title='rusoto::cloudfront::OriginProtocolPolicy'>OriginProtocolPolicy</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.PathList.html'
+                                  title='rusoto::cloudfront::PathList'>PathList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.PriceClass.html'
+                                  title='rusoto::cloudfront::PriceClass'>PriceClass</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.QueryStringCacheKeysList.html'
+                                  title='rusoto::cloudfront::QueryStringCacheKeysList'>QueryStringCacheKeysList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.ResourceARN.html'
+                                  title='rusoto::cloudfront::ResourceARN'>ResourceARN</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.SSLSupportMethod.html'
+                                  title='rusoto::cloudfront::SSLSupportMethod'>SSLSupportMethod</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.SignerList.html'
+                                  title='rusoto::cloudfront::SignerList'>SignerList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.SslProtocol.html'
+                                  title='rusoto::cloudfront::SslProtocol'>SslProtocol</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.SslProtocolsList.html'
+                                  title='rusoto::cloudfront::SslProtocolsList'>SslProtocolsList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.StreamingDistributionSummaryList.html'
+                                  title='rusoto::cloudfront::StreamingDistributionSummaryList'>StreamingDistributionSummaryList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.TagKey.html'
+                                  title='rusoto::cloudfront::TagKey'>TagKey</a></td>
+                           <td class='docblock-short'>
+                                <p>A string that contains Tag key. The string length should be between 1 and 128 characters. Valid characters include a-z, A-Z, 0-9, space, and the special characters _ - . : / = + @.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.TagKeyList.html'
+                                  title='rusoto::cloudfront::TagKeyList'>TagKeyList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.TagList.html'
+                                  title='rusoto::cloudfront::TagList'>TagList</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.TagValue.html'
+                                  title='rusoto::cloudfront::TagValue'>TagValue</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Timestamp.html'
+                                  title='rusoto::cloudfront::Timestamp'>Timestamp</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.ViewerProtocolPolicy.html'
+                                  title='rusoto::cloudfront::ViewerProtocolPolicy'>ViewerProtocolPolicy</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "rusoto";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>
